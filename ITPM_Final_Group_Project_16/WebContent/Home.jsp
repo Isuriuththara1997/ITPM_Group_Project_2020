@@ -94,7 +94,7 @@ h1 {
   </br>
   <a href="#services">ContactUs</a>
   </br>
-  <a href="#clients">Log In</a>
+  <a href="index.jsp">Log In</a>
   </br>
   <a href="Upload.jsp">Upload File</a>
   </br>
@@ -125,11 +125,22 @@ h1 {
 <div class="main">
   <h1 style="color: white;">
 		<b><i>Code Complexity Measuring Tool</i></b>
+		<br>Welcome ${username}
 	</h1>
+	
+	<%
+  if(session.getAttribute("username")==null){
+	  response.sendRedirect("index.jsp");
+  }
+  %>
+  
+  
 
 </div>
  </br><br></br></br> </br><br></br></br> </br><br></br></br> </br><br></br></br> </br><br></br></br>
   </br><br></br></br> </br><br></br></br> </br><br></br></br></br></br> 
+  
+  
   
 <div id="footer">Code by ITPM Group 16</div>
 
