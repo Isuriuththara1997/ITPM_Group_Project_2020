@@ -49,8 +49,17 @@ border: 1px solid black;
 	ArrayList<Integer> Count = complexity.cntrolrow();
 	ArrayList<Integer> WTC = complexity.wtcrow();
 	ArrayList<Integer> NC = complexity.ncrow();
+	ArrayList<Integer> Ccspps = complexity.ccsppsrow();
 
 %>
+<h1>Ccs = (Wtcs * NC) + Ccspps</h1>
+<h1>(Wtcs * NC) = A</h1>
+<h1>Ccs = A + Ccspps</h1>
+<h4>Ccs = Complexity of a program statement with a control structure</h4>
+<h4>Wtcs = Weight due to control structure type</h4>
+<h4>NC = Number of conditions in the control structure</h4>
+<h4>Ccspps = Control structure complexity of the previous program statement. Hence, 
+always the value of Ccspps would be zero for control structures which reside at the first nesting level or outer most nesting level.</h4>
 
 	<table>
 		
@@ -59,6 +68,8 @@ border: 1px solid black;
 		    <th>Source Code</th>
 		    <th>Wtc</th>
 		    <th>Nc</th>
+		    <th>A</th>
+		    <th>Ccspps</th>
 		    <th>Ccs</th>
 		  </tr>
 		
@@ -73,6 +84,9 @@ border: 1px solid black;
 			    <th><%=WTC.get(i) %></th>
 			    <th><%=NC.get(i) %></th>
 			    <th><%=Count.get(i) %></th>
+			    <th><%=Ccspps.get(i) %></th>
+			    <th><%=(Count.get(i)+Ccspps.get(i)) %></th>
+			    
 			</tr>
 			
 	
