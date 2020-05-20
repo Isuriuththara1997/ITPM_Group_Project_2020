@@ -1,17 +1,12 @@
-package inheritance;
-
-
-
+package InheritanceComplexity;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+public class InheritanceComplexity {
 
-
-public class Inheritance {
-	
 	String keyword1 = "extends";
 	String keyword2 = "implements";
 
@@ -19,7 +14,7 @@ public class Inheritance {
 	ArrayList<String> line;
 	ArrayList<Integer> key;
 
-	public Inheritance(ArrayList<String> lines) {
+	public InheritanceComplexity(ArrayList<String> lines) {
 		this.line = lines;
 		key = new ArrayList<Integer>(lines.size());
 	}
