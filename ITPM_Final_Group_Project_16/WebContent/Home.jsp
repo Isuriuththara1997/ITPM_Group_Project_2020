@@ -94,9 +94,7 @@ h1 {
   </br>
   <a href="#services">ContactUs</a>
   </br>
-  <a href="index.jsp">Log In</a>
-  </br>
-  <a href="Upload.jsp">Upload File</a>
+  
   </br>
   <button class="dropdown-btn">Services 
     <i class="fa fa-caret-down"></i>
@@ -108,6 +106,7 @@ h1 {
      <a href="Inheritance.jsp">Inheritance</a>
       <a href="#">Coupling</a>
        <a href="Control.jsp">Control Structure</a>
+       <a href="all.jsp">All Factors</a>
   </div>
   </br>
   <a href="#contact">Search</a>

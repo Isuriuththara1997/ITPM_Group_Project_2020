@@ -35,7 +35,7 @@ table, th, td {
 <%
 
 
-String f1 = "C:\\Users\\Minindu Sudantha\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+request.getParameter("filename");
+String f1 = "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+request.getParameter("filename");
      FileReader fr = new FileReader(f1);
     BufferedReader br = new BufferedReader(fr);
 	

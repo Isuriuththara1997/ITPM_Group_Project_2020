@@ -38,13 +38,13 @@ public class InheritanceComplexityMain {
 			
 			InheritanceComplexity complexity = new InheritanceComplexity(line);
 			
-			ArrayList<Integer> Count = complexity.inheritkeyline();
+			ArrayList<Integer> Counts = complexity.inheritkeyline();
 			
 			
 			
 	for(i=0; i < line.size(); i++ ){
 				
-				System.out.println("" + (i+1) +"" + line.get(i) + "" +Count.get(i)+""+Count.get(i)+""+(Count.get(i) + Count.get(i)));
+				System.out.println("" + (i+1) +"" + line.get(i) + "" +Counts.get(i)+""+Counts.get(i)+""+(Counts.get(i) + Counts.get(i)));
 			
 	}
 			System.out.println(" ");

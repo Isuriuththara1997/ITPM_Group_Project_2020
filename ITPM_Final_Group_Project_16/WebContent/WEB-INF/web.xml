@@ -29,4 +29,15 @@
 		<servlet-name>FileUploadHandlerInheritanc</servlet-name>
 		<url-pattern>/FileUploadHandlerInheritanc/*</url-pattern>
 	</servlet-mapping>
+	
+		
+			<servlet>
+		<servlet-name>AllFactors</servlet-name>
+		<servlet-class>servlet.AllFactors</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AllFactors</servlet-name>
+		<url-pattern>/AllFactors/*</url-pattern>
+	</servlet-mapping>
 </web-app>

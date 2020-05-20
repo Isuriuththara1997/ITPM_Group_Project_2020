@@ -109,8 +109,7 @@ h1 {
   </br>
   <a href="#services">ContactUs</a>
   </br>
-  <a href="#clients">Log In</a>
-  </br>
+
   <a href="Home.jsp">Home</a>
   </br>
 
@@ -124,6 +123,7 @@ h1 {
      <a href="Inheritance.jsp">Inheritance</a>
       <a href="#">Coupling</a>
        <a href="Control.jsp">Control Structure</a>
+       <a href="all.jsp">All Factors</a>
   </div>
   </br>
   <a href="#contact">Search</a>

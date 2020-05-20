@@ -14,10 +14,10 @@ import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-
+import ComplexityControlStructure.ControlStructureCalculationMain;
 import InheritanceComplexity.InheritanceComplexityMain;
 
-public class FileUploadHandlerInheritanc extends HttpServlet {
+public class AllFactors extends HttpServlet {
 	private static final long serialVersionUID = 1;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -56,7 +56,10 @@ public class FileUploadHandlerInheritanc extends HttpServlet {
 						fileItem.write(new File(destination));
 						file_name=fileItem.getName();
 					InheritanceComplexityMain cs1=new InheritanceComplexityMain();
+					ControlStructureCalculationMain cs2 = new ControlStructureCalculationMain();
+					
 					cs1.setPath(destination);
+					cs2.setPath(destination);
 					}
 				}
 			}
@@ -64,7 +67,7 @@ public class FileUploadHandlerInheritanc extends HttpServlet {
 			e.printStackTrace();
 		} finally {
 			out.println("<script type='text/javascript'>");
-			out.println("window.location.href='InheritResult.jsp?filename=" + file_name + "'");
+			out.println("window.location.href='allFactors.jsp?filename=" + file_name + "'");
 			out.println("</script>");
 			out.close();
 		}
