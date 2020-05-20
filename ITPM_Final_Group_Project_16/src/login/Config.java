@@ -10,7 +10,7 @@ public class Config {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/codecomplexitymeasuringtool", "root", "");
+			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/codecomplexitymeasuringtool", "root", "root");
 
 			System.out.println("Connection Successful");
 		} catch (Exception e) {

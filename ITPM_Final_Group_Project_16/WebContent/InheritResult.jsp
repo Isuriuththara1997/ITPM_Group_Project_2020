@@ -1,4 +1,6 @@
-<%@page import="inheritance.Inheritance"%>
+<%@page import="InheritanceComplexity.InheritanceComplexity"%>
+<%@page import="InheritanceComplexity.InheritanceComplexityMain"%>
+
 <%@page import="java.io.BufferedReader"%>
 <%@page import="java.io.FileReader"%>
 <%@page import="java.util.ArrayList"%>
@@ -33,12 +35,12 @@ table, th, td {
 <%
 
 
-String f1 = ("C:\\Users\\Minindu Sudantha\\Desktop\\DaysPerMonth.java");
-FileReader fr = new FileReader(f1);
-BufferedReader br = new BufferedReader(fr);
+String f1 = "C:\\Users\\Minindu Sudantha\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+request.getParameter("filename");
+     FileReader fr = new FileReader(f1);
+    BufferedReader br = new BufferedReader(fr);
 	
-	int i ;
 	String lines;
+	
 	ArrayList<String> line = new ArrayList<>();
 	
 	while((lines = br.readLine())!= null) {
@@ -46,7 +48,7 @@ BufferedReader br = new BufferedReader(fr);
 		
 	}
 	
-	Inheritance complexity = new Inheritance(line);
+	InheritanceComplexity complexity = new InheritanceComplexity(line);
 	
 	ArrayList<Integer> Count = complexity.inheritkeyline();
 
@@ -64,7 +66,7 @@ BufferedReader br = new BufferedReader(fr);
 			
 		</tr>
 		<%
-		for(i=0; i < line.size(); i++ ){
+		for(int i=0; i < line.size(); i++ ){
 			%>
 			
 			<tr>
