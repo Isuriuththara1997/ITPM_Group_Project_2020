@@ -57,6 +57,7 @@ String documentName = "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\
 	ArrayList<Integer> Ccspps = complexity.ccsppsrow();
 
 %>
+<div id="HTMLtoPDF">
 <h1>Ccs = (Wtcs * NC) + Ccspps</h1>
 <h1>(Wtcs * NC) = A</h1>
 <h1>Ccs = A + Ccspps</h1>
@@ -65,7 +66,12 @@ String documentName = "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\
 <h4>NC = Number of conditions in the control structure</h4>
 <h4>Ccspps = Control structure complexity of the previous program statement. Hence, 
 always the value of Ccspps would be zero for control structures which reside at the first nesting level or outer most nesting level.</h4>
-
+<!--     <div class="col-sm-2"> -->
+<!--       <button class=" btn btn-danger" (click)="print()"><i class="fa fa-print" style="margin-right: 10px;"></i>Summary Control Structure</button> -->
+<!--     </div> -->
+<button href="#" onclick="HTMLtoPDF()" style="color: red">Download PDF</button>	
+    </br>
+    </br>
 	<table>
 		
 		  <tr>
@@ -99,5 +105,11 @@ always the value of Ccspps would be zero for control structures which reside at 
 		}
 		%> 
 	</table>
+</div>
+
+
+	<script src="js/jspdf.js"></script>
+	<script src="js/jquery-2.1.3.js"></script>
+	<script src="js/pdfFromHTML.js"></script>
 </body>
 </html>
