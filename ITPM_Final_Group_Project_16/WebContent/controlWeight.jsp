@@ -137,8 +137,7 @@ border: 1px solid black;
   </br>
   <a href="#clients">Log In</a>
   </br>
-  <a href="Upload.jsp">Upload File</a>
-  </br>
+
   <button class="dropdown-btn">Services 
     <i class="fa fa-caret-down"></i>
   </button>

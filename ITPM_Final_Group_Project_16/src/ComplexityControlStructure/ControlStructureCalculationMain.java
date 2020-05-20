@@ -8,9 +8,29 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ControlStructureCalculationMain {
+	
+//	private String filePath = "";
+//	
+//	public String getFilePath(String path) {
+//		this.filePath = path;
+//		System.out.println("---------------------------" + path);
+//		return this.filePath;
+//	}
+	 String path;
+	
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
+	}
+
 	public static void main(String[] args) throws IOException {
 
-		String documentName = "C:\\Users\\isuri\\Desktop\\abc.txt";
+//		String documentName = "C:\\Users\\isuri\\Desktop\\abc.txt";
+		ControlStructureCalculationMain cs1=new ControlStructureCalculationMain();
+		String documentName =cs1.getPath();
 		//read file
 		FileReader document = new FileReader(documentName);
 		BufferedReader bufferedreader = new BufferedReader(document);

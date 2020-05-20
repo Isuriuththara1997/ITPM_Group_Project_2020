@@ -1,6 +1,7 @@
 <%@page import="java.io.BufferedReader"%>
 <%@page import="java.io.FileReader"%>
 <%@page import="ComplexityControlStructure.ControlStructureCalculation"%>
+<%@page import="ComplexityControlStructure.ControlStructureCalculationMain"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -31,7 +32,11 @@ border: 1px solid black;
 </head>
 <body>
 <%
-	String documentName = "C:\\Users\\isuri\\Desktop\\abc.txt";
+	
+//ControlStructureCalculationMain cs1=new ControlStructureCalculationMain();
+//String documentName =cs1.getPath();
+
+String documentName = "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+request.getParameter("filename");
 	FileReader document = new FileReader(documentName);
 	BufferedReader bufferedreader = new BufferedReader(document);
 	
