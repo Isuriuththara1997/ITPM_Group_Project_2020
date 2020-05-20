@@ -53,8 +53,12 @@ String f1 = "C:\\Users\\Minindu Sudantha\\Desktop\\ITPM\\ITPM_Group_Project_2020
 	ArrayList<Integer> Count = complexity.inheritkeyline();
 
 %>
-	<h1>Inheritance Results</h1>
 
+<div id="HTMLtoPDF">
+	<h1>Inheritance Results</h1>
+<button href="#" onclick="HTMLtoPDF()" style="color: red">Download PDF</button>	
+    </br>
+    </br>
 	<table>
 		<tr>
 			<th>Row No</th>
@@ -86,5 +90,11 @@ String f1 = "C:\\Users\\Minindu Sudantha\\Desktop\\ITPM\\ITPM_Group_Project_2020
 		
 
 	</table>
+	</div>
+
+
+	<script src="js/jspdf.js"></script>
+	<script src="js/jquery-2.1.3.js"></script>
+	<script src="js/pdfFromHTML.js"></script>
 </body>
 </html>
