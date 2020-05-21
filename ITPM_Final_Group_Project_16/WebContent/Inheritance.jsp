@@ -187,7 +187,7 @@ h1 {
 	</br>
 
 	<div id="section" class="center">
-				<a href= "controlWeight.jsp"><button class="button">Change weight</button></a>
+				<a href= "iInheritanceWeightChange.jsp"><button class="button">Change weight</button></a>
 
 				 <form action="FileUploadHandlerInheritanc" enctype="multipart/form-data" method="post">
 
