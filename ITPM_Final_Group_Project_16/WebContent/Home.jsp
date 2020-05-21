@@ -100,7 +100,7 @@ h1 {
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
-    <a href="#">Size</a>
+    <a href="sizes.jsp">Size</a>
     <a href="#">Variables</a>
     <a href="#">Methods</a>
      <a href="Inheritance.jsp">Inheritance</a>
