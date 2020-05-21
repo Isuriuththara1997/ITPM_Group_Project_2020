@@ -1,3 +1,5 @@
+<%@page import="sizeComplexity.sizeComplexityMain"%>
+<%@page import="sizeComplexity.sizeCalculator"%>
 <%@page import="java.io.BufferedReader"%>
 <%@page import="java.io.FileReader"%>
 <%@page import="ComplexityControlStructure.ControlStructureCalculation"%>
@@ -38,6 +40,7 @@ border: 1px solid black;
 	
 //ControlStructureCalculationMain cs1=new ControlStructureCalculationMain();
 //String documentName =cs1.getPath();
+//control structure
 
 String documentName =  "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+request.getParameter("filename");
 	FileReader document = new FileReader(documentName);
@@ -77,7 +80,17 @@ String documentName =  "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020
 	InheritanceComplexity complexityinherit = new InheritanceComplexity(line);
 	
 	ArrayList<Integer> Counts = complexityinherit.inheritkeyline();
+	
+	//size
+	 	String documentNames =  "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+request.getParameter("filename");
 
+		FileReader fileReader = new FileReader(documentNames);
+		BufferedReader bufferedReader = new BufferedReader(fileReader);
+		
+		
+		sizeCalculator sizeCalculator = new sizeCalculator(row);
+		
+		ArrayList<Integer> C = sizeCalculator.ctcsline();
 %>
 <table>
 		
@@ -93,6 +106,7 @@ String documentName =  "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020
 						<th>Indirect Inheritance</th>
 						<th>Total</th>
 						<th>CI</th>
+						<th>Cs</th>
 		  </tr>
 		
 		<%
@@ -112,6 +126,7 @@ String documentName =  "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020
 			    <th><%=Counts.get(i) %></th>
 			   <th><%=(Counts.get(i) + Counts.get(i)) %></th>
 			   <th><%=(Counts.get(i) + Counts.get(i)) %></th>
+			   <th><%=C.get(i) %></th>
 			    
 			</tr>
 			
