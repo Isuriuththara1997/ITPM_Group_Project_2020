@@ -1,7 +1,7 @@
+<%@page import="sizeComplexity.sizeCalculator"%>
 <%@page import="java.io.BufferedReader"%>
 <%@page import="java.io.FileReader"%>
-<%@page import="ComplexityControlStructure.ControlStructureCalculation"%>
-<%@page import="ComplexityControlStructure.ControlStructureCalculationMain"%>
+<%@page import="sizeComplexity.*"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -31,6 +31,7 @@ border: 1px solid black;
 </style>
 </head>
 <body>
+
 <%
 	
 //ControlStructureCalculationMain cs1=new ControlStructureCalculationMain();
@@ -49,32 +50,18 @@ String documentName = "C:\\Users\\Tavish Perera\\git\\ITPM_Group_Project_2020\\I
 
 	}
 	
-	ControlStructureCalculation complexity = new ControlStructureCalculation(row);
+	//ControlStructureCalculation complexity = new ControlStructureCalculation(row);
+	sizeCalculator calculator = new sizeCalculator(row);
 	
-	ArrayList<Integer> Count = complexity.cntrolrow();
-	ArrayList<Integer> WTC = complexity.wtcrow();
-	ArrayList<Integer> NC = complexity.ncrow();
-	ArrayList<Integer> Ccspps = complexity.ccsppsrow();
+	ArrayList<Integer> Ccspps = calculator.ctcsline();
 
 %>
-<h1>Ccs = (Wtcs * NC) + Ccspps</h1>
-<h1>(Wtcs * NC) = A</h1>
-<h1>Ccs = A + Ccspps</h1>
-<h4>Ccs = Complexity of a program statement with a control structure</h4>
-<h4>Wtcs = Weight due to control structure type</h4>
-<h4>NC = Number of conditions in the control structure</h4>
-<h4>Ccspps = Control structure complexity of the previous program statement. Hence, 
-always the value of Ccspps would be zero for control structures which reside at the first nesting level or outer most nesting level.</h4>
-
-	<table>
+<table>
 		
 		  <tr>
 		    <th>Line Number</th>
 		    <th>Source Code</th>
-		    <th>Wtc</th>
-		    <th>Nc</th>
-		    <th>A</th>
-		    <th>Ccspps</th>
+		    
 		    <th>Ccs</th>
 		  </tr>
 		
@@ -86,11 +73,10 @@ always the value of Ccspps would be zero for control structures which reside at 
 			<tr>
 				<th><%=(i+1) %></th>
 			    <th><%=row.get(i) %></th>
-			    <th><%=WTC.get(i) %></th>
-			    <th><%=NC.get(i) %></th>
-			    <th><%=Count.get(i) %></th>
+			    
+			    
 			    <th><%=Ccspps.get(i) %></th>
-			    <th><%=(Count.get(i)+Ccspps.get(i)) %></th>
+			    
 			    
 			</tr>
 			
@@ -99,5 +85,8 @@ always the value of Ccspps would be zero for control structures which reside at 
 		}
 		%> 
 	</table>
+</body>
+</html>
+
 </body>
 </html>
