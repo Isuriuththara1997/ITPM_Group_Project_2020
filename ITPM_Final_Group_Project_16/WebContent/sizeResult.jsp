@@ -26,7 +26,12 @@ td, th {
 table,th,td{
 border: 1px solid black;
 }
+tr:nth-child(even){background-color: rgb(175,255,255);}
 
+th {
+  background-color: dodgerblue;
+  color: white;
+}
 
 </style>
 </head>
@@ -71,11 +76,11 @@ String documentName = "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\
 		%>
 	
 			<tr>
-				<th><%=(i+1) %></th>
-			    <th><%=row.get(i) %></th>
+				<td><%=(i+1) %></td>
+			    <td><%=row.get(i) %></td>
 			    
 			    
-			    <th><%=C.get(i) %></th>
+			    <td><%=C.get(i) %></td>
 			    
 			    
 			</tr>

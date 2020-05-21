@@ -26,7 +26,12 @@ td, th {
 table,th,td{
 border: 1px solid black;
 }
+tr:nth-child(even){background-color: rgb(175,255,255);}
 
+th {
+  background-color: dodgerblue;
+  color: white;
+}
 
 </style>
 </head>
@@ -90,13 +95,13 @@ always the value of Ccspps would be zero for control structures which reside at 
 		%>
 	
 			<tr>
-				<th><%=(i+1) %></th>
-			    <th><%=row.get(i) %></th>
-			    <th><%=WTC.get(i) %></th>
-			    <th><%=NC.get(i) %></th>
-			    <th><%=Count.get(i) %></th>
-			    <th><%=Ccspps.get(i) %></th>
-			    <th><%=(Count.get(i)+Ccspps.get(i)) %></th>
+				<td><%=(i+1) %></td>
+			    <td><%=row.get(i) %></td>
+			    <td><%=WTC.get(i) %></td>
+			    <td><%=NC.get(i) %></td>
+			    <td><%=Count.get(i) %></td>
+			    <td><%=Ccspps.get(i) %></td>
+			    <td><%=(Count.get(i)+Ccspps.get(i)) %></td>
 			    
 			</tr>
 			

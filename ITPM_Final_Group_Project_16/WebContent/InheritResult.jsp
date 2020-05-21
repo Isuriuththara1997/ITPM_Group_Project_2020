@@ -29,6 +29,12 @@ td, th {
 table, th, td {
 	border: 1px solid black;
 }
+tr:nth-child(even){background-color: rgb(175,255,255);}
+
+th {
+  background-color: dodgerblue;
+  color: white;
+}
 </style>
 </head>
 <body>
@@ -74,12 +80,12 @@ String f1 = "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Fina
 			%>
 			
 			<tr>
-				<th><%=(i+1) %></th>
-			    <th><%=line.get(i) %></th>
-			    <th><%=Count.get(i) %></th>
-			    <th><%=Count.get(i) %></th>
-			   <th><%=(Count.get(i) + Count.get(i)) %></th>
-			   <th><%=(Count.get(i) + Count.get(i)) %></th>
+				<td><%=(i+1) %></td>
+			    <td><%=line.get(i) %></td>
+			    <td><%=Count.get(i) %></td>
+			    <td><%=Count.get(i) %></td>
+			   <td><%=(Count.get(i) + Count.get(i)) %></td>
+			   <td><%=(Count.get(i) + Count.get(i)) %></td>
 
 			</tr>
 			

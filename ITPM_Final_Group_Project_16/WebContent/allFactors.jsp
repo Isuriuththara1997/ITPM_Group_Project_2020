@@ -32,7 +32,12 @@ td, th {
 table,th,td{
 border: 1px solid black;
 }
+tr:nth-child(even){background-color: rgb(175,255,255);}
 
+th {
+  background-color: dodgerblue;
+  color: white;
+}
 
 </style>
 <body>
@@ -115,18 +120,18 @@ String documentName =  "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020
 		%>
 	
 			<tr>
-				<th><%=(i+1) %></th>
-			    <th><%=row.get(i) %></th>
-			    <th><%=WTC.get(i) %></th>
-			    <th><%=NC.get(i) %></th>
-			    <th><%=Count.get(i) %></th>
-			    <th><%=Ccspps.get(i) %></th>
-			    <th><%=(Count.get(i)+Ccspps.get(i)) %></th>
-			    			    <th><%=Counts.get(i) %></th>
-			    <th><%=Counts.get(i) %></th>
-			   <th><%=(Counts.get(i) + Counts.get(i)) %></th>
-			   <th><%=(Counts.get(i) + Counts.get(i)) %></th>
-			   <th><%=C.get(i) %></th>
+				<td><%=(i+1) %></td>
+			    <td><%=row.get(i) %></td>
+			    <td><%=WTC.get(i) %></td>
+			    <td><%=NC.get(i) %></td>
+			    <td><%=Count.get(i) %></td>
+			    <td><%=Ccspps.get(i) %></td>
+			    <td><%=(Count.get(i)+Ccspps.get(i)) %></td>
+			   <td><%=Counts.get(i) %></td>
+			    <td><%=Counts.get(i) %></td>
+			   <td><%=(Counts.get(i) + Counts.get(i)) %></td>
+			   <td><%=(Counts.get(i) + Counts.get(i)) %></td>
+			   <td><%=C.get(i) %></td>
 			    
 			</tr>
 			

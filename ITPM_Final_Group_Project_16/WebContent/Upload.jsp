@@ -7,6 +7,27 @@
 <title>Code Complexity Tool</title>
 </head>
 <style type="text/css">
+h2 {
+ text-align: center;
+ color: yellow;
+}
+.center{
+	margin: 0;
+	position: absolute;
+	top: 70%;
+	left: 80%;
+-ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.footer{
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #000099;
+   color: white;
+   text-align: center;
+}
 #section {
 	width: 1000px;
 	height: 470px;
@@ -39,13 +60,7 @@
 	cursor: pointer;
 }
 
-#footer {
-	background-color: #000099;
-	color: white;
-	text-align: center;
-	padding: 6px;
-	clear: both;
-}
+
 body {
   font-family: "Lato", sans-serif;
 }
@@ -181,27 +196,21 @@ for (i = 0; i < dropdown.length; i++) {
 
 	</br>
 	<h2 style="color: yellow;">
-		<b><i>		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please Upload your Source Code to Measure the Complexity</i></b>
+		<b><i>Please Upload your Source Code to Measure the Complexity</i></b>
 	</h2>
 	</br>
 	
-	<div id="section">
+	<div id="section" class="center">
 	
 		<form action="/action_page.php">
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 			<input type="file" id="myFile" name="filename" class="button1"> 
 			<input type="submit" class="button" formaction="Home.jsp">
 			
 		</form>
 	</div>
 
-	<div id="footer">Code by ITPM Group 16</div>
+	<div id="footer" class="footer">Code by ITPM Group 16</div>
 	
 	
 
