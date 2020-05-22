@@ -136,11 +136,11 @@ body {
 			Services <i class="fa fa-caret-down"></i>
 		</button>
 		<div class="dropdown-container">
-						<a href="sizes.jsp">Size</a> 
+			  			<a href="sizes.jsp">Size</a> 
 			<a href="variables.jsp">Variables</a> <a
 				href="methods.jsp">Methods</a> 
 				<a href="Inheritance.jsp">Inheritance</a>
-		<a href="coupling.jsp">Coupling</a>  
+			<a href="coupling.jsp">Coupling</a> 
 			<a href="Control.jsp">Control Structure</a>
 			<a href="all.jsp">All Factors</a>
 		</div>

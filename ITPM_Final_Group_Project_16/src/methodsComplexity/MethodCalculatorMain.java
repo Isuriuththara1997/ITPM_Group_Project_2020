@@ -41,13 +41,13 @@ public class MethodCalculatorMain {
 
 		}
 
-		/*
-		 * MethodCalculator methodCalculator = new MethodCalculator(row);
-		 * 
-		 * ArrayList<Integer> MethodCount = methodCalculator.allMethods();
-		 * 
-		 * for (int i = 0; i < row.size(); i++) { System.out.println("  " + (i + 1) +
-		 * " " + MethodCount.get(i)); System.out.println(""); }
-		 */
+		
+		  MethodCalculator methodCalculator = new MethodCalculator(row);
+		  
+		  ArrayList<Integer> MethodCount = methodCalculator.allmethods();
+		  
+		  for (int i = 0; i < row.size(); i++) { System.out.println("  " + (i + 1) +
+		  " " + MethodCount.get(i)); System.out.println(""); }
+		 
 	}
 }
