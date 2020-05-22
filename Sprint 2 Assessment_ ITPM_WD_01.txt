@@ -1,0 +1,63 @@
+Dear sir,
+
+We tried to host this web application to microsoft azure, firebase and hiroku servers but these servers didnt compatible with our application.
+So we upload this to github please clone it from here. every. jsp and servlet files has a specific location thats why we cannot host this to a server we cannot specify the specific location.
+The default location is a desktop path that in my laptop sir please change that location to this 
+C:\\Users\\ <username> \\git\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\ add the username in the specific area so this program is executable.
+
+	Eclipse IDE for Enterprise Java Developers - 2020-03
+        Tomcat 9.0
+        MysqlWorkbench 8.19
+
+ITPM_Final_Group_Project_16 ------- src-------servlet
+
+1.	AllFactors.java
+
+	line number 57
+
+2.	FileUploadHandler.java
+
+	line number 52
+
+3.	FileUploadHandlerInheritanc.java
+
+	line number 55
+
+4.	MethodsUploadHandler.java
+
+	line number 54
+
+5.	SizeUploadHandler.java
+
+	line number 56
+
+6.	VariableUploadHandler.java
+
+	line number 54
+
+
+ITPM_Final_Group_Project_16 ------- WebContent
+
+1.	result.jsp
+
+	line number 44
+
+2.	allFactors.jsp
+
+	line number 52,73,92,108
+
+3.	InheritResault.jsp
+
+	line number 44
+
+4.	sizeResult.jsp
+
+	line number 41
+
+5.	variableResult.jsp
+
+	line number 45
+
+6.	methodResult.jsp
+
+	line number 41
