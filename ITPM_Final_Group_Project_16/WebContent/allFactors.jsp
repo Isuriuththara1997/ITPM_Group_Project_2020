@@ -1,15 +1,21 @@
+<%@page import="sizeComplexity.sizeComplexityMain"%>
+<%@page import="sizeComplexity.sizeCalculator"%>
 <%@page import="java.io.BufferedReader"%>
 <%@page import="java.io.FileReader"%>
 <%@page import="ComplexityControlStructure.ControlStructureCalculation"%>
 <%@page import="ComplexityControlStructure.ControlStructureCalculationMain"%>
 <%@page import="java.util.ArrayList"%>
+<%@page import="InheritanceComplexity.InheritanceComplexity"%>
+<%@page import="InheritanceComplexity.InheritanceComplexityMain"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
+<script src="inheritance.InheritanceMain.java"></script>
+<script src="inheritance.Inheritance.java"></script> 
 <meta charset="ISO-8859-1">
-<title>Result</title>
+<title>All Factors</title>
 </head>
 <style>
 table {
@@ -34,14 +40,14 @@ th {
 }
 
 </style>
-</head>
 <body>
 <%
 	
 //ControlStructureCalculationMain cs1=new ControlStructureCalculationMain();
 //String documentName =cs1.getPath();
+//control structure
 
-String documentName = "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+request.getParameter("filename");
+String documentName =  "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+request.getParameter("filename");
 	FileReader document = new FileReader(documentName);
 	BufferedReader bufferedreader = new BufferedReader(document);
 	
@@ -51,7 +57,6 @@ String documentName = "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\
 	
 	while((rows = bufferedreader.readLine())!= null) {
 		row.add(rows);
-
 	}
 	
 	ControlStructureCalculation complexity = new ControlStructureCalculation(row);
@@ -61,23 +66,38 @@ String documentName = "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\
 	ArrayList<Integer> NC = complexity.ncrow();
 	ArrayList<Integer> Ccspps = complexity.ccsppsrow();
 
+	
+	//inheritance
+ 	String f1 =  "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+request.getParameter("filename");
+	
+ 	 FileReader fr = new FileReader(f1);
+     BufferedReader br = new BufferedReader(fr);
+	
+	String lines;
+	
+	ArrayList<String> line = new ArrayList<>();
+	
+	while((lines = br.readLine())!= null) {
+		line.add(lines);
+		
+	}
+	
+	InheritanceComplexity complexityinherit = new InheritanceComplexity(line);
+	
+	ArrayList<Integer> Counts = complexityinherit.inheritkeyline();
+	
+	//size
+	 	String documentNames =  "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+request.getParameter("filename");
+
+		FileReader fileReader = new FileReader(documentNames);
+		BufferedReader bufferedReader = new BufferedReader(fileReader);
+		
+		
+		sizeCalculator sizeCalculator = new sizeCalculator(row);
+		
+		ArrayList<Integer> C = sizeCalculator.ctcsline();
 %>
-<div id="HTMLtoPDF">
-<h1>Ccs = (Wtcs * NC) + Ccspps</h1>
-<h1>(Wtcs * NC) = A</h1>
-<h1>Ccs = A + Ccspps</h1>
-<h4>Ccs = Complexity of a program statement with a control structure</h4>
-<h4>Wtcs = Weight due to control structure type</h4>
-<h4>NC = Number of conditions in the control structure</h4>
-<h4>Ccspps = Control structure complexity of the previous program statement. Hence, 
-always the value of Ccspps would be zero for control structures which reside at the first nesting level or outer most nesting level.</h4>
-<!--     <div class="col-sm-2"> -->
-<!--       <button class=" btn btn-danger" (click)="print()"><i class="fa fa-print" style="margin-right: 10px;"></i>Summary Control Structure</button> -->
-<!--     </div> -->
-<button href="#" onclick="HTMLtoPDF()" style="color: red">Download PDF</button>	
-    </br>
-    </br>
-	<table>
+<table>
 		
 		  <tr>
 		    <th>Line Number</th>
@@ -87,6 +107,11 @@ always the value of Ccspps would be zero for control structures which reside at 
 		    <th>A</th>
 		    <th>Ccspps</th>
 		    <th>Ccs</th>
+		    			<th>Direct Inheritance</th>
+						<th>Indirect Inheritance</th>
+						<th>Total</th>
+						<th>CI</th>
+						<th>Cs</th>
 		  </tr>
 		
 		<%
@@ -102,6 +127,11 @@ always the value of Ccspps would be zero for control structures which reside at 
 			    <td><%=Count.get(i) %></td>
 			    <td><%=Ccspps.get(i) %></td>
 			    <td><%=(Count.get(i)+Ccspps.get(i)) %></td>
+			   <td><%=Counts.get(i) %></td>
+			    <td><%=Counts.get(i) %></td>
+			   <td><%=(Counts.get(i) + Counts.get(i)) %></td>
+			   <td><%=(Counts.get(i) + Counts.get(i)) %></td>
+			   <td><%=C.get(i) %></td>
 			    
 			</tr>
 			
@@ -109,12 +139,7 @@ always the value of Ccspps would be zero for control structures which reside at 
 		<%
 		}
 		%> 
+
 	</table>
-</div>
-
-
-	<script src="js/jspdf.js"></script>
-	<script src="js/jquery-2.1.3.js"></script>
-	<script src="js/pdfFromHTML.js"></script>
 </body>
 </html>

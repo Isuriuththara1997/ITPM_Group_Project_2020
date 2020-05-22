@@ -29,13 +29,19 @@ td, th {
 table, th, td {
 	border: 1px solid black;
 }
+tr:nth-child(even){background-color: rgb(175,255,255);}
+
+th {
+  background-color: dodgerblue;
+  color: white;
+}
 </style>
 </head>
 <body>
 <%
 
 
-String f1 = "C:\\Users\\Minindu Sudantha\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+request.getParameter("filename");
+String f1 = "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+request.getParameter("filename");
      FileReader fr = new FileReader(f1);
     BufferedReader br = new BufferedReader(fr);
 	
@@ -53,8 +59,12 @@ String f1 = "C:\\Users\\Minindu Sudantha\\Desktop\\ITPM\\ITPM_Group_Project_2020
 	ArrayList<Integer> Count = complexity.inheritkeyline();
 
 %>
-	<h1>Inheritance Results</h1>
 
+<div id="HTMLtoPDF">
+	<h1>Inheritance Results</h1>
+<button href="#" onclick="HTMLtoPDF()" style="color: red">Download PDF</button>	
+    </br>
+    </br>
 	<table>
 		<tr>
 			<th>Row No</th>
@@ -70,12 +80,12 @@ String f1 = "C:\\Users\\Minindu Sudantha\\Desktop\\ITPM\\ITPM_Group_Project_2020
 			%>
 			
 			<tr>
-				<th><%=(i+1) %></th>
-			    <th><%=line.get(i) %></th>
-			    <th><%=Count.get(i) %></th>
-			    <th><%=Count.get(i) %></th>
-			   <th><%=(Count.get(i) + Count.get(i)) %></th>
-			   <th><%=(Count.get(i) + Count.get(i)) %></th>
+				<td><%=(i+1) %></td>
+			    <td><%=line.get(i) %></td>
+			    <td><%=Count.get(i) %></td>
+			    <td><%=Count.get(i) %></td>
+			   <td><%=(Count.get(i) + Count.get(i)) %></td>
+			   <td><%=(Count.get(i) + Count.get(i)) %></td>
 
 			</tr>
 			
@@ -86,5 +96,11 @@ String f1 = "C:\\Users\\Minindu Sudantha\\Desktop\\ITPM\\ITPM_Group_Project_2020
 		
 
 	</table>
+	</div>
+
+
+	<script src="js/jspdf.js"></script>
+	<script src="js/jquery-2.1.3.js"></script>
+	<script src="js/pdfFromHTML.js"></script>
 </body>
 </html>

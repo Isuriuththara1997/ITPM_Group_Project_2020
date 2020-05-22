@@ -49,7 +49,7 @@ public class FileUploadHandler extends HttpServlet {
 					}
 				} else {
 					if (fileItem.getSize() > 0) {
-					String destination="C:\\Users\\Tavish Perera\\git\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+fileItem.getName();
+					String destination="C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+fileItem.getName();
 						fileItem.write(new File(destination));
 						file_name=fileItem.getName();
 					ControlStructureCalculationMain cs1=new ControlStructureCalculationMain();

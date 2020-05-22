@@ -29,6 +29,7 @@
 		<url-pattern>/FileUploadHandlerInheritanc/*</url-pattern>
 	</servlet-mapping>
 	
+
 	<servlet>
 		<servlet-name>SizeUploadHandler</servlet-name>
 		<servlet-class>servlet.SizeUploadHandler</servlet-class>
@@ -57,5 +58,26 @@
 	<servlet-mapping>
 		<servlet-name>MethodsUploadHandler</servlet-name>
 		<url-pattern>/MethodsUploadHandler/*</url-pattern>
+
+		
+			<servlet>
+		<servlet-name>AllFactors</servlet-name>
+		<servlet-class>servlet.AllFactors</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AllFactors</servlet-name>
+		<url-pattern>/AllFactors/*</url-pattern>
+	</servlet-mapping>
+	
+				<servlet>
+		<servlet-name>SizeUploadHandler</servlet-name>
+		<servlet-class>servlet.SizeUploadHandler</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SizeUploadHandler</servlet-name>
+		<url-pattern>/SizeUploadHandler/*</url-pattern>
+
 	</servlet-mapping>
 </web-app>

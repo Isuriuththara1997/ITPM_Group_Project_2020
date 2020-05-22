@@ -100,6 +100,7 @@ body {
 }
 </style>
 </head>
+
 <body>
 
 	<div class="sidenav">
@@ -182,6 +183,81 @@ body {
 			});
 		}
 	</script>
+
+<body style="background-image:url('home.jpg')">
+
+<div class="sidenav">
+  <a href="#about">AboutUs</a>
+  </br>
+  <a href="#services">ContactUs</a>
+  </br>
+  
+  </br>
+  <button class="dropdown-btn">Services 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="sizes.jsp">Size</a>
+    <a href="#">Variables</a>
+    <a href="#">Methods</a>
+     <a href="Inheritance.jsp">Inheritance</a>
+      <a href="#">Coupling</a>
+       <a href="Control.jsp">Control Structure</a>
+       <a href="all.jsp">All Factors</a>
+  </div>
+  </br>
+  <a href="#contact">Search</a>
+  </br>
+ <a href="https://www.facebook.com/">Facebook</a>
+   </br>
+ <a href="www.facebook.com">YouTube</a>
+   </br>
+ <a href="www.facebook.com">Instagram</a>
+   </br>
+ <a href="www.facebook.com">LinkdIN</a>
+
+</div>
+
+<div class="main">
+  <h1 style="color: white;">
+		<b><i>Code Complexity Measuring Tool</i></b>
+		<br>Welcome ${username}
+	</h1>
+	
+	<%
+  if(session.getAttribute("username")==null){
+	  response.sendRedirect("index.jsp");
+  }
+  %>
+  
+  
+
+</div>
+ </br><br></br></br> </br><br></br></br> </br><br></br></br> </br><br></br></br> </br><br></br></br>
+  </br><br></br></br> </br><br></br></br> </br><br></br></br></br></br> 
+  
+  
+  
+<div id="footer">Code by ITPM Group 16</div>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+
 
 </body>
 </html>
