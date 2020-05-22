@@ -136,7 +136,7 @@ h1 {
 			<a href="variables.jsp">Variables</a> <a
 				href="methods.jsp">Methods</a> 
 				<a href="Inheritance.jsp">Inheritance</a>
-			<a href="#">Coupling</a> 
+			<a href="coupling.jsp">Coupling</a> 
 			<a href="Control.jsp">Control Structure</a>
 			<a href="all.jsp">All Factors</a>
   </div>
