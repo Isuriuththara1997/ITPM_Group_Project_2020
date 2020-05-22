@@ -1,6 +1,5 @@
 package servlet;
 
-
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -24,7 +23,7 @@ public class SizeUploadHandler extends HttpServlet {
 	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		
+
 		String file_name = null;
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
@@ -51,11 +50,16 @@ public class SizeUploadHandler extends HttpServlet {
 					}
 				} else {
 					if (fileItem.getSize() > 0) {
+
+						String destination = "C:\\Users\\Tavish Perera\\git\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"
+								+ fileItem.getName();
+
 					String destination="C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+fileItem.getName();
+
 						fileItem.write(new File(destination));
-						file_name=fileItem.getName();
-					sizeComplexityMain cs1=new sizeComplexityMain();
-					cs1.setPath(destination);
+						file_name = fileItem.getName();
+						sizeComplexityMain sizecomplexityMain = new sizeComplexityMain();
+						sizecomplexityMain.setPath(destination);
 					}
 				}
 			}

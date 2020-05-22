@@ -1,3 +1,9 @@
+/**
+ * SLIIT ID : IT18020236
+ * @author : Y.R.S Nadeeshani
+ * @version : 1.0
+ */
+
 package login;
 
 import java.io.IOException;
@@ -39,6 +45,10 @@ public class sign extends HttpServlet {
 
 			request.getRequestDispatcher("index.jsp").forward(request, response);
 
+		} else if (submittype.equals("Login") && username.equals("admin") && password.equals("admin")) {
+			HttpSession session = request.getSession();
+			session.setAttribute("username", username);
+			request.getRequestDispatcher("Home.jsp").forward(request, response);
 		} else {
 			request.getRequestDispatcher("index.jsp").forward(request, response);
 		}

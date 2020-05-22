@@ -1,10 +1,14 @@
+/**
+ * SLIIT ID : IT18020236
+ * @author : Y.R.S Nadeeshani
+ * @version : 1.0
+ */
 @charset "utf-8";
-/* CSS Document */
+
 body {
 	background-size: cover;
 	font-family: Arial;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-		url(../Images/tenor.gif);
+	background-image: url(../Images/tenor.gif);
 }
 
 .wrap {
@@ -33,7 +37,7 @@ input[type=text], input[type=password] {
 	border-weight: bold;
 }
 
-input[type=submit] ,a{
+input[type=submit] {
 	width: 100%;
 	box-sizing: border-box;
 	padding: 10px 0;
@@ -52,6 +56,7 @@ input[type=submit]:hover {
 	background: rgb(0, 0, 255);
 	opacity: 0.7;
 }
+
 input[type=button]:hover {
 	background: rgb(0, 0, 255);
 	opacity: 0.7;
