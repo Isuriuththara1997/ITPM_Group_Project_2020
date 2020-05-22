@@ -70,7 +70,7 @@ String documentName =  "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020
 
 	
 	//inheritance
- 	String f1 =  "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+request.getParameter("filename");
+ 	String f1 = "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+request.getParameter("filename");
 	
  	 FileReader fr = new FileReader(f1);
      BufferedReader br = new BufferedReader(fr);
@@ -89,7 +89,7 @@ String documentName =  "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020
 	ArrayList<Integer> Counts = complexityinherit.inheritkeyline();
 	
 	//size
-	 	String documentNames =  "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+request.getParameter("filename");
+	 	String documentNames = "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+request.getParameter("filename");
 
 		FileReader fileReader = new FileReader(documentNames);
 		BufferedReader bufferedReader = new BufferedReader(fileReader);

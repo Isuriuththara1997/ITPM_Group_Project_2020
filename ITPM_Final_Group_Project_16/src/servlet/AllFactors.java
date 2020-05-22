@@ -17,6 +17,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import ComplexityControlStructure.ControlStructureCalculationMain;
 import InheritanceComplexity.InheritanceComplexityMain;
 import sizeComplexity.sizeComplexityMain;
+import variableComplexity.variableCalculatorMain;
 
 public class AllFactors extends HttpServlet {
 	private static final long serialVersionUID = 1;
@@ -59,10 +60,12 @@ public class AllFactors extends HttpServlet {
 					InheritanceComplexityMain cs1=new InheritanceComplexityMain();
 					ControlStructureCalculationMain cs2 = new ControlStructureCalculationMain();
 					sizeComplexityMain cs3 = new sizeComplexityMain();
+					variableCalculatorMain cs4 = new variableCalculatorMain();
 					
 					cs1.setPath(destination);
 					cs2.setPath(destination);
 					cs3.setPath(destination);
+					cs4.setPath(destination);
 					}
 				}
 			}
