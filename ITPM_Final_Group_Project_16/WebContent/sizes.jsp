@@ -16,27 +16,6 @@ SLIIT ID : IT18020236
 
 </head>
 <style type="text/css">
-h2 {
- text-align: center;
- color: yellow;
-}
-.center{
-	margin: 0;
-	position: absolute;
-	top: 70%;
-	left: 80%;
--ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.footer{
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: #000099;
-   color: white;
-   text-align: center;
-}
 #section {
 	width: 1000px;
 	height: 470px;
@@ -69,7 +48,6 @@ h2 {
 	cursor: pointer;
 }
 
-
 #footer {
 	background-color: #000099;
 	color: white;
@@ -77,7 +55,6 @@ h2 {
 	padding: 6px;
 	clear: both;
 }
-
 
 body {
 	font-family: "Lato", sans-serif;
@@ -152,49 +129,20 @@ body {
 
 <body>
 	<div class="sidenav">
-
 		<a href="#about">AboutUs</a> </br> <a href="#services">ContactUs</a> </br> <a
 			href="#clients">Log In</a> </br> <a href="Home.jsp">Home</a> </br>
-
-<a href="#about">AboutUs</a>
-  </br>
-  <a href="#services">ContactUs</a>
-  </br>
-
-  <a href="Home.jsp">Home</a>
-  </br>
-
-  <button class="dropdown-btn">Services 
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <a href="sizes.jsp">Size</a>
-    <a href="#">Variables</a>
-    <a href="#">Methods</a>
-     <a href="Inheritance.jsp">Inheritance</a>
-      <a href="#">Coupling</a>
-       <a href="Control.jsp">Control Structure</a>
-       <a href="all.jsp">All Factors</a>
-  </div>
-  </br>
-  <a href="#contact">Search</a>
-  </br>
- <a href="https://www.facebook.com/">Facebook</a>
-   </br>
- <a href="www.facebook.com">YouTube</a>
-   </br>
- <a href="www.facebook.com">Instagram</a>
-   </br>
- <a href="www.facebook.com">Linkdin</a>
-
 
 		<button class="dropdown-btn">
 			Services <i class="fa fa-caret-down"></i>
 		</button>
 		<div class="dropdown-container">
-			<a href="sizes.jsp">Size</a> <a href="variables.jsp">Variables</a> <a
-				href="methods.jsp">Methods</a> <a href="Inheritance.jsp">Inheritance</a>
-			<a href="#">Coupling</a> <a href="Control.jsp">Control Structure</a>
+  			<a href="sizes.jsp">Size</a> 
+			<a href="variables.jsp">Variables</a> <a
+				href="methods.jsp">Methods</a> 
+				<a href="Inheritance.jsp">Inheritance</a>
+			<a href="#">Coupling</a> 
+			<a href="Control.jsp">Control Structure</a>
+			<a href="all.jsp">All Factors</a>
 		</div>
 		</br> <a href="#contact">Search</a> </br> <a href="https://www.facebook.com/">Facebook</a>
 		</br> <a href="www.facebook.com">YouTube</a> </br> <a href="www.facebook.com">Instagram</a>
@@ -224,14 +172,9 @@ body {
 		}
 	</script>
 	</br>
-
 	<h2 style="color: white; text-align: center;">
 		<b>Please Upload your Source Code to Measure the Complexity of a
 			program due to size</b>
-
-	<h2 style="color: yellow;">
-		<b><i>Please Upload your Source Code to Measure the Complexity of Size</i></b>
-
 	</h2>
 	</br>
 	<form action="SizeUploadHandler" enctype="multipart/form-data"
@@ -239,21 +182,6 @@ body {
 		<input type="file" name="file2" class="button1" /><br> <input
 			type="submit" value="Upload" class="button1" />
 	</form>
-
-
-	<div id="section" class="center">
-
-
-				 <form action="SizeUploadHandler" enctype="multipart/form-data" method="post">
-
- 						<input type="file" name="file2" class="button1"/><br>
-
- 						<input type="submit" value="Upload" class="button1"/>
- 				</form> 
-				<br />
-	</div>
-
-	<div id="footer" class="footer">Code by ITPM Group 16</div>
 
 </body>
 </html>

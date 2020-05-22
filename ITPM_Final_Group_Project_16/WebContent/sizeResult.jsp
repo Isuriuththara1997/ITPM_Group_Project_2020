@@ -29,34 +29,17 @@ td, th {
 	text-align: left;
 	padding: 8px;
 }
-tr:nth-child(even){background-color: rgb(175,255,255);}
-
 
 table, th, td {
 	border: 1px solid black;
 }
-
-th {
-  background-color: dodgerblue;
-  color: white;
-}
-
 </style>
 </head>
 <body>
 
-
 	<%
 		String documentName = "C:\\Users\\Tavish Perera\\git\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"
 			+ request.getParameter("filename");
-
-<%
-	
-//ControlStructureCalculationMain cs1=new ControlStructureCalculationMain();
-//String documentName =cs1.getPath();
-
-String documentName = "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+request.getParameter("filename");
-
 	FileReader document = new FileReader(documentName);
 	BufferedReader bufferedreader = new BufferedReader(document);
 
@@ -69,7 +52,6 @@ String documentName = "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\
 
 	}
 	sizeCalculator calculator = new sizeCalculator(row);
-
 
 	ArrayList<Integer> csCount = calculator.csCount();
 	ArrayList<Integer> keywords = calculator.keywords();
@@ -91,25 +73,9 @@ String documentName = "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\
 			<th>Cs</th>
 		</tr>
 
-
-	
-	ArrayList<Integer> C = calculator.ctcsline();
-
-%>
-<table>
-		
-		  <tr>
-		    <th>Line Number</th>
-		    <th>Source Code</th>
-		    
-		    <th>Cs</th>
-		  </tr>
-		
-
 		<%
 			for (int i = 0; i < row.size(); i++) {
 		%>
-
 
 		<tr>
 			<th><%=(i + 1)%></th>
@@ -121,19 +87,6 @@ String documentName = "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\
 			<th><%=literals.get(i)%></th>
 			<th><%=csCount.get(i)%></th>
 		</tr>
-
-	
-			<tr>
-				<td><%=(i+1) %></td>
-			    <td><%=row.get(i) %></td>
-			    
-			    
-			    <td><%=C.get(i) %></td>
-			    
-			    
-			</tr>
-			
-
 		<%
 			}
 		%>

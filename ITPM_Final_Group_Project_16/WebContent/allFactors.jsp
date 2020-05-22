@@ -1,5 +1,7 @@
 <%@page import="sizeComplexity.sizeComplexityMain"%>
 <%@page import="sizeComplexity.sizeCalculator"%>
+<%@page import="variableComplexity.variableCalculator"%>
+<%@page import="variableComplexity.variableCalculatorMain"%>
 <%@page import="java.io.BufferedReader"%>
 <%@page import="java.io.FileReader"%>
 <%@page import="ComplexityControlStructure.ControlStructureCalculation"%>
@@ -93,9 +95,25 @@ String documentName =  "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
 		
 		
-		sizeCalculator sizeCalculator = new sizeCalculator(row);
+		sizeCalculator calculator = new sizeCalculator(row);
+
+		ArrayList<Integer> csCount = calculator.csCount();
+		ArrayList<Integer> keywords = calculator.keywords();
+		ArrayList<Integer> identifiers = calculator.identifiers();
+		ArrayList<Integer> operators = calculator.operators();
+		ArrayList<Integer> numbers = calculator.numbers();
+		ArrayList<Integer> literals = calculator.strings();
 		
-		ArrayList<Integer> C = sizeCalculator.ctcsline();
+		//variables
+		String documentNamev = "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+request.getParameter("filename");
+	FileReader documentv = new FileReader(documentName);
+	BufferedReader bufferedreaderv = new BufferedReader(document);
+	
+			variableCalculator variableCalculator = new variableCalculator(row);
+	
+	ArrayList<Integer> cvCount = variableCalculator.allVariable();
+	ArrayList<Integer> npdtv = variableCalculator.priVariable();
+	ArrayList<Integer> ncdtv = variableCalculator.compVariable();
 %>
 <table>
 		
@@ -111,7 +129,17 @@ String documentName =  "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020
 						<th>Indirect Inheritance</th>
 						<th>Total</th>
 						<th>CI</th>
-						<th>Cs</th>
+			<th>Nkw</th>
+			<th>Nid</th>
+			<th>Nop</th>
+			<th>Nnv</th>
+			<th>Nsl</th>
+			<th>Cs</th>
+			
+			<th>Wvs</th>
+			<th>Npdtv</th>
+			<th>Ncdtv</th>
+			<th>Cv</th>
 		  </tr>
 		
 		<%
@@ -127,11 +155,23 @@ String documentName =  "C:\\Users\\isuri\\Desktop\\ITPM\\ITPM_Group_Project_2020
 			    <td><%=Count.get(i) %></td>
 			    <td><%=Ccspps.get(i) %></td>
 			    <td><%=(Count.get(i)+Ccspps.get(i)) %></td>
+			    
 			   <td><%=Counts.get(i) %></td>
 			    <td><%=Counts.get(i) %></td>
 			   <td><%=(Counts.get(i) + Counts.get(i)) %></td>
 			   <td><%=(Counts.get(i) + Counts.get(i)) %></td>
-			   <td><%=C.get(i) %></td>
+			   
+			<td><%=keywords.get(i)%></td>
+			<td><%=identifiers.get(i)%></td>
+			<td><%=operators.get(i)%></td>
+			<td><%=numbers.get(i)%></td>
+			<td><%=literals.get(i)%></td>
+			<td><%=csCount.get(i)%></td>
+			
+			<td>1</td>
+			<td><%=npdtv.get(i) %></td>
+			<td><%=ncdtv.get(i) %></td>
+			<td><%=cvCount.get(i) %></td>
 			    
 			</tr>
 			

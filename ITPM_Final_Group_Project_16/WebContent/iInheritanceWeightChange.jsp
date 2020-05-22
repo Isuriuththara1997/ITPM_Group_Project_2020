@@ -142,12 +142,13 @@ border: 1px solid black;
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
-    <a href="#">Size</a>
-    <a href="#">Variables</a>
-    <a href="#">Methods</a>
-     <a href="Inheritance.jsp">Inheritance</a>
-      <a href="#">Coupling</a>
-       <a href="Control.jsp">Control Structure</a>
+			<a href="sizes.jsp">Size</a> 
+			<a href="variables.jsp">Variables</a> <a
+				href="methods.jsp">Methods</a> 
+				<a href="Inheritance.jsp">Inheritance</a>
+			<a href="#">Coupling</a> 
+			<a href="Control.jsp">Control Structure</a>
+			<a href="all.jsp">All Factors</a>
   </div>
   </br>
   <a href="#contact">Search</a>
