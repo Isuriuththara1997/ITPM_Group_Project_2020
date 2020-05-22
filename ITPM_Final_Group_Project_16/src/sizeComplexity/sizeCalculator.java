@@ -1,3 +1,9 @@
+/**
+ * SLIIT ID : IT18020236
+ * @author : Y.R.S Nadeeshani
+ * @version : 1.0
+ */
+
 package sizeComplexity;
 
 import java.io.BufferedReader;
@@ -10,7 +16,12 @@ import java.util.regex.Pattern;
 public class sizeCalculator {
 
 	ArrayList<String> line;
-	ArrayList<Integer> ctcsCount;
+	ArrayList<Integer> csCount;
+	ArrayList<Integer> keywordsCount;
+	ArrayList<Integer> identifiersCount;
+	ArrayList<Integer> operatorsCount;
+	ArrayList<Integer> numbersCount;
+	ArrayList<Integer> stringsCount;
 
 	String keyword = "(\\bpublic|void\\b|true\\b|else\\b|default\\b|return\\b|null\\b|break\\b|this\\b)";
 	String operators = "([+,-,*,/,%,++,--,==,!=,>,<,<=,>=])";
@@ -21,7 +32,12 @@ public class sizeCalculator {
 
 	public sizeCalculator(ArrayList<String> lines) {
 		this.line = lines;
-		ctcsCount = new ArrayList<Integer>(lines.size());
+		csCount = new ArrayList<Integer>(lines.size());
+		keywordsCount = new ArrayList<Integer>(lines.size());
+		identifiersCount = new ArrayList<Integer>(lines.size());
+		operatorsCount = new ArrayList<Integer>(lines.size());
+		numbersCount = new ArrayList<Integer>(lines.size());
+		stringsCount = new ArrayList<Integer>(lines.size());
 	}
 
 	public int operatorsCount(String line) {
@@ -94,17 +110,6 @@ public class sizeCalculator {
 		return addCount;
 	}
 
-	public int calcline(String lines) {
-		int keywords = keywordCount(lines);
-		int operators = operatorsCount(lines);
-		int numbers = numberCount(lines);
-		int literals = literalCount(lines);
-		int logicals = logicalCount(lines, lines);
-
-		return (keywords + operators + numbers + literals + logicals);
-
-	}
-
 	public void calclinebyline() {
 		for (int i = 0; i < line.size(); i++) {
 			int keywords = keywordCount(line.get(i));
@@ -113,23 +118,42 @@ public class sizeCalculator {
 			int literals = literalCount(line.get(i));
 			int logicals = logicalCount(line.get(i), line.get(i));
 
-			ctcsCount.add(keywords + operators + numbers + literals + logicals);
+			keywordsCount.add(keywords);
+			operatorsCount.add(operators + logicals);
+			numbersCount.add(numbers);
+			stringsCount.add(literals);
+			identifiersCount.add(null);
+			csCount.add(keywords + operators + numbers + literals + logicals);
 		}
 	}
 
-	public ArrayList<Integer> ctcsline() {
+	public ArrayList<Integer> csCount() {
 		calclinebyline();
-		return ctcsCount;
+		return csCount;
 	}
 
-	public int calcCtcs() {
-		int totalctcs = 0;
-		int i;
-		for (i = 0; i < ctcsCount.size(); i++) {
-			totalctcs = totalctcs + ctcsCount.get(i);
-		}
-
-		return totalctcs;
+	public ArrayList<Integer> keywords() {
+		calclinebyline();
+		return keywordsCount;
 	}
 
+	public ArrayList<Integer> operators() {
+		calclinebyline();
+		return operatorsCount;
+	}
+
+	public ArrayList<Integer> identifiers() {
+		calclinebyline();
+		return identifiersCount;
+	}
+
+	public ArrayList<Integer> numbers() {
+		calclinebyline();
+		return numbersCount;
+	}
+
+	public ArrayList<Integer> strings() {
+		calclinebyline();
+		return stringsCount;
+	}
 }

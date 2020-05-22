@@ -1,5 +1,6 @@
 package servlet;
 
+
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -15,7 +16,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 import sizeComplexity.sizeComplexityMain;
 
-public class SizeUploadHandler extends HttpServlet {
+public class MethodsUploadHandler extends HttpServlet {
 	private static final long serialVersionUID = 1;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -23,7 +24,7 @@ public class SizeUploadHandler extends HttpServlet {
 	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
+		
 		String file_name = null;
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
@@ -50,12 +51,11 @@ public class SizeUploadHandler extends HttpServlet {
 					}
 				} else {
 					if (fileItem.getSize() > 0) {
-						String destination = "C:\\Users\\Tavish Perera\\git\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"
-								+ fileItem.getName();
+					String destination="C:\\Users\\Tavish Perera\\git\\ITPM_Group_Project_2020\\ITPM_Final_Group_Project_16\\uploads\\"+fileItem.getName();
 						fileItem.write(new File(destination));
-						file_name = fileItem.getName();
-						sizeComplexityMain sizecomplexityMain = new sizeComplexityMain();
-						sizecomplexityMain.setPath(destination);
+						file_name=fileItem.getName();
+					sizeComplexityMain cs1=new sizeComplexityMain();
+					cs1.setPath(destination);
 					}
 				}
 			}
@@ -63,7 +63,7 @@ public class SizeUploadHandler extends HttpServlet {
 			e.printStackTrace();
 		} finally {
 			out.println("<script type='text/javascript'>");
-			out.println("window.location.href='sizeResult.jsp?filename=" + file_name + "'");
+			out.println("window.location.href='methodsResult.jsp?filename=" + file_name + "'");
 			out.println("</script>");
 			out.close();
 		}

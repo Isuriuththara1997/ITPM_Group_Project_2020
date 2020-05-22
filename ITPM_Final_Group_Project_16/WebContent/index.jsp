@@ -1,3 +1,9 @@
+<!-- 
+SLIIT ID : IT18020236
+@author : Y.R.S Nadeeshani
+@version : 1.0 
+-->
+
 <html>
 <head>
 <title>Login</title>
@@ -11,10 +17,9 @@
 				autofocus required />
 			<p>Password</p>
 			<input type="password" name="pass" placeholder="Enter Password"
-				required /> 
-				<input type="submit" name="submit" value="Login">
-				<a
-			href="signin.jsp">Sign Up</a>
+				required /> <input type="submit" name="submit" value="Login"/>
+				<br>
+				<br><a href="signin.jsp">No account ? SignUp Today</a><br>
 		</form>
 	</div>
 </body>

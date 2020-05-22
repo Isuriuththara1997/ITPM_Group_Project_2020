@@ -1,19 +1,20 @@
 /**
  * SLIIT ID : IT18020236
  * @author : Y.R.S Nadeeshani
- * @version : 1.0
+ * @version : 2.0
  */
 
-package sizeComplexity;
+package variableComplexity;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class sizeComplexityMain {
+import variableComplexity.variableCalculator;
+import variableComplexity.variableCalculatorMain;
 
+public class variableCalculatorMain {
 	String path;
 
 	public String getPath() {
@@ -26,12 +27,13 @@ public class sizeComplexityMain {
 
 	public static void main(String[] args) throws IOException {
 
-		sizeComplexityMain sizecomplexityMain = new sizeComplexityMain();
-		String documentName = sizecomplexityMain.getPath();
+		variableCalculatorMain complexityMain = new variableCalculatorMain();
+		String documentName = complexityMain.getPath();
 
 		FileReader fileReader = new FileReader(documentName);
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
 
+		int i;
 		String rows;
 		ArrayList<String> row = new ArrayList<>();
 
@@ -40,11 +42,11 @@ public class sizeComplexityMain {
 
 		}
 
-		sizeCalculator sizeCalculator = new sizeCalculator(row);
+		variableCalculator variableCalculator = new variableCalculator(row);
 
-		ArrayList<Integer> sizeCount = sizeCalculator.csCount();
+		ArrayList<Integer> sizeCount = variableCalculator.allVariable();
 
-		for (int i = 0; i < row.size(); i++) {
+		for (i = 0; i < row.size(); i++) {
 			System.out.println("  " + (i + 1) + " " + sizeCount.get(i));
 			System.out.println("");
 		}

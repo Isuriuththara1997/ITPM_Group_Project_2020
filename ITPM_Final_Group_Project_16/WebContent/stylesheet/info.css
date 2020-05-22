@@ -1,0 +1,36 @@
+/**
+ * SLIIT ID : IT18020236
+ * @author : Y.R.S Nadeeshani
+ * @version : 1.0
+ */
+@charset "ISO-8859-1";
+
+body {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url(../Images/info.jpg);
+	background-size: cover;
+	font-family: sans-serif;
+}
+
+h1 {
+	text-align: center;
+	color: white;
+}
+
+h2 {
+	text-align: center;
+	color: white;
+}
+
+h3 {
+	text-align: center;
+	color: white;
+}
+
+a:link {
+	color: white;
+}
+
+a:visited {
+	color: red;
+}

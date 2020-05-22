@@ -1,18 +1,19 @@
 /**
  * SLIIT ID : IT18020236
  * @author : Y.R.S Nadeeshani
- * @version : 1.0
+ * @version : 3.0
  */
 
-package sizeComplexity;
+package methodsComplexity;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class sizeComplexityMain {
+import methodsComplexity.*;
+
+public class MethodCalculatorMain {
 
 	String path;
 
@@ -26,8 +27,8 @@ public class sizeComplexityMain {
 
 	public static void main(String[] args) throws IOException {
 
-		sizeComplexityMain sizecomplexityMain = new sizeComplexityMain();
-		String documentName = sizecomplexityMain.getPath();
+		MethodCalculatorMain complexityMain = new MethodCalculatorMain();
+		String documentName = complexityMain.getPath();
 
 		FileReader fileReader = new FileReader(documentName);
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -40,14 +41,13 @@ public class sizeComplexityMain {
 
 		}
 
-		sizeCalculator sizeCalculator = new sizeCalculator(row);
-
-		ArrayList<Integer> sizeCount = sizeCalculator.csCount();
-
-		for (int i = 0; i < row.size(); i++) {
-			System.out.println("  " + (i + 1) + " " + sizeCount.get(i));
-			System.out.println("");
-		}
+		/*
+		 * MethodCalculator methodCalculator = new MethodCalculator(row);
+		 * 
+		 * ArrayList<Integer> MethodCount = methodCalculator.allMethods();
+		 * 
+		 * for (int i = 0; i < row.size(); i++) { System.out.println("  " + (i + 1) +
+		 * " " + MethodCount.get(i)); System.out.println(""); }
+		 */
 	}
-
 }
